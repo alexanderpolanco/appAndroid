@@ -1,6 +1,6 @@
 export default {
   serverPort: 80,
-  baseUrl: 'http://192.168.0.22',
+  baseUrl: 'http://10.0.0.50',
   api: {
     url: '/react/appAndroid/src/api/'
   }
