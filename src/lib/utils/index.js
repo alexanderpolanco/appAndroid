@@ -1,5 +1,3 @@
-var validate = true;
-
 export function getNewState(state, newState) {
   return Object.assign({}, state, newState);
 }
@@ -25,6 +23,7 @@ export function isNumber(variable) {
 }
 
 export function isEmail(variable) {
+  let validate = true;
   if( !(/\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)/.test(variable)) ) {
     validate = false;
   }
@@ -32,6 +31,7 @@ export function isEmail(variable) {
 }
 
 export function required(variable) {
+  let validate = true;
   if( variable == null || variable.length == 0 || /^\s+$/.test(variable)) {
     validate = false;
   }
@@ -39,6 +39,7 @@ export function required(variable) {
 }
 
 export function isUser(variable) {
+  let validate = true;
   if( /[^A-Za-z]/.test(variable)) {
     validate = false;
   }
